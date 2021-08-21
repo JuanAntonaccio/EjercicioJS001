@@ -1,11 +1,29 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+var dato;
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let who = ["The dog", "My grandma", "His turtle", "My bird"];
+let action = ["ate", "peed", "crushed", "broke"];
+let what = ["my homework", "the keys", "the car"];
+let when = [
+  "before the class",
+  "right on time",
+  "when I finished",
+  "during my lunch",
+  "while I was praying"
+];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+function datos(array) {
+  let largo = array.length;
+  // random el valor maximo esta excluido
+  let indice = Math.floor(Math.random() * largo);
+  let retorna = array[indice];
+  return retorna;
+}
+
+let var1 = datos(who);
+let var2 = datos(action);
+let var3 = datos(what);
+let var4 = datos(when);
+
+dato = var1 + " " + var2 + " " + var3 + " " + var4;
+
+document.getElementById("excuse").innerHTML = dato;
